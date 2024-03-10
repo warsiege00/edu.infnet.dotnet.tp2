@@ -1,0 +1,20 @@
+﻿@page
+@model dotnet_tp2.Pages.PessoaPageModel
+@{
+    ViewData["Title"] = "Lista de Pessoas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<section class="pessoas">
+    <ul>
+        @foreach (var pessoa in Model.Pessoas)
+        {
+            <li>
+                <h2>Nome: @pessoa.Nome</h2>
+                <p>Idade: @pessoa.Idade</p>
+                <p>CPF: @pessoa.CPF</p>
+            </li>
+        }
+    </ul>
+</section>
